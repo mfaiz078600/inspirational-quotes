@@ -6,7 +6,7 @@ on:
 
   # Try enabling auto-merge for all open pull requests.
   schedule:
-    - cron: 0 * * * *
+    - cron: 1 * * * *
 
   # Try enabling auto-merge for a pull request when a draft is marked as “ready for review”, when
   # a required label is applied or when a “do not merge” label is removed, or when a pull request
@@ -32,7 +32,7 @@ jobs:
   automerge:
     runs-on: ubuntu-latest
     steps:
-      - uses: reitermarkus/automerge@v2
+      - uses: reitermarkus/automerge@v1
         with:
           token: ${{ secrets.MY_GITHUB_TOKEN }}
           merge-method: rebase
